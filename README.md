@@ -35,6 +35,8 @@ The system requires the following inputs:
 * **Social Accounts**: Handles for the brand's social media accounts
 * **Content Brief**: Topic, purpose, key points, and call to action
 
+**Note:** To customize the inputs, you can modify the corresponding variables directly within the `main.py` file.
+
 ## Output
 
 The system generates:
@@ -50,7 +52,15 @@ The system generates:
 To run the content adapter:
 
 ```bash
-python main.py
+# 1. Clone the repository
+git clone https://github.com/moarshy/content_creators
+cd content_creators
+
+# 2. Sync dependencies using uv
+uv sync
+
+# 3. Run the main script
+uv run python main.py
 ```
 
 The system will generate content based on the provided inputs and save the results to the `output` directory.
