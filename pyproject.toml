@@ -1,0 +1,22 @@
+[project]
+name = "content_creators"
+version = "0.1.0"
+description = "Create content for social media using CrewAI"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "crewai[tools]>=0.95.0",
+    "google-genai>=1.9.0",
+]
+
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+include = [ "content_creators" ]
+exclude = [ "__pycache__", "*.pyc", ".pytest_cache", ".ruff_cache",]
