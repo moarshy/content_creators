@@ -1,0 +1,69 @@
+core_message_creation_task:
+  description: >
+    Develop core messaging based on the provided brief: {content_brief}.
+    Ensure this messaging aligns with the brand's identity: {brand_name}, {brand_description},
+    appeals to the target audience: {target_audience}, and uses the appropriate
+    tone of voice: {tone_of_voice}.
+  expected_output: >
+    A comprehensive core message with key points that can be adapted
+    across all social platforms while maintaining brand consistency.
+
+x_content_adaptation_task:
+  description: >
+    Adapt the core message for X/Twitter, optimizing for the platform's character
+    limits and engagement patterns. Include appropriate hashtags.
+  expected_output: >
+    A complete X/Twitter post with text and hashtags, optimized for maximum engagement.
+
+facebook_content_adaptation_task:
+  description: >
+    Adapt the core message for Facebook, focusing on community engagement and
+    the platform's unique audience.
+  expected_output: >
+    A complete Facebook post with text and engagement prompts.
+
+instagram_content_adaptation_task:
+  description: >
+    Adapt the core message for Instagram, with a focus on effective
+    captions and strategic hashtag use.
+  expected_output: >
+    A complete Instagram caption with appropriate hashtags.
+
+linkedin_content_adaptation_task:
+  description: >
+    Adapt the core message for LinkedIn, emphasizing professional tone and
+    business audience engagement.
+  expected_output: >
+    A complete LinkedIn post optimized for professional audiences.
+
+brand_consistency_review_task:
+  description: >
+    Review all platform-specific content adaptations to ensure adherence to brand 
+    tone: {tone_of_voice} and messaging consistency.
+  expected_output: >
+    A detailed review of each platform's content with specific feedback on brand alignment.
+
+content_finalization_task:
+  description: >
+    Integrate feedback from the brand review to finalize all platform-specific
+    content while maintaining optimization for each platform.
+  expected_output: >
+    Final versions of all platform-specific text content ready for posting.
+
+image_prompt_creation_task:
+  description: >
+    Create an effective image generation prompt based on the core message from the
+    previous task. The prompt should produce an image that aligns with the brand's 
+    identity: {brand_name}, {brand_description}, and uses the brand colors: {brand_colors}.
+    The image should appeal to the target audience: {target_audience} and support the
+    content's core message.
+    
+    Your prompt should follow these best practices for AI image generation:
+    1. Be specific and detailed about what should be in the image
+    2. Include specific information about style, lighting, and composition
+    3. Mention the brand colors that should be incorporated
+    4. Specify that the image should be suitable for social media marketing
+    5. Request a professional, clean aesthetic with no text in the image
+  expected_output: >
+    A detailed image generation prompt that can be used to generate an image aligned with
+    the brand identity and core message.
