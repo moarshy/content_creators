@@ -4,6 +4,8 @@ import json
 from content_creators.crew import ContentAdapterCrew
 from content_creators.image_generator import generate_image
 import time
+import openai
+from pydantic import BaseModel
 
 def run():
     # Sample inputs from onboarding
@@ -74,5 +76,19 @@ def run():
     
     return content_data
 
+class Inputs(BaseModel):
+    brand_name: str
+    brand_description: str
+    target_audience: str
+    tone_of_voice: str
+    post_as_company: bool
+    website: str
+
 if __name__ == "__main__":
-    run()
+    # run()
+
+    requirements_description = """
+    Write social media content for the launch of new AI Process Automation tool.
+    
+    """
+
