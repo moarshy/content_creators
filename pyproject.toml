@@ -7,6 +7,8 @@ requires-python = ">=3.12"
 dependencies = [
     "crewai[tools]>=0.95.0",
     "google-genai>=1.9.0",
+    "a2a-samples @ git+https://github.com/google/A2A.git@main#subdirectory=samples/python",
+
 ]
 
 [build-system]
@@ -20,3 +22,6 @@ allow-direct-references = true
 [tool.hatch.build.targets.wheel]
 include = [ "content_creators" ]
 exclude = [ "__pycache__", "*.pyc", ".pytest_cache", ".ruff_cache",]
+
+[project.scripts]
+serve_a2a = "content_creators.__main__:main"

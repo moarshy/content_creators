@@ -8,6 +8,22 @@ resolution-markers = [
 ]
 
 [[package]]
+name = "a2a-samples"
+version = "0.1.0"
+source = { git = "https://github.com/google/A2A.git?subdirectory=samples%2Fpython&rev=main#445905a3a5f08cbd84062159978058c90961a298" }
+dependencies = [
+    { name = "httpx" },
+    { name = "httpx-sse" },
+    { name = "jwcrypto" },
+    { name = "pydantic" },
+    { name = "pyjwt" },
+    { name = "sse-starlette" },
+    { name = "starlette" },
+    { name = "typing-extensions" },
+    { name = "uvicorn" },
+]
+
+[[package]]
 name = "aiohappyeyeballs"
 version = "2.6.1"
 source = { registry = "https://pypi.org/simple" }
@@ -459,12 +475,14 @@ name = "content-creators"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "a2a-samples" },
     { name = "crewai", extra = ["tools"] },
     { name = "google-genai" },
 ]
 
 [package.metadata]
 requires-dist = [
+    { name = "a2a-samples", git = "https://github.com/google/A2A.git?subdirectory=samples%2Fpython&rev=main" },
     { name = "crewai", extras = ["tools"], specifier = ">=0.95.0" },
     { name = "google-genai", specifier = ">=1.9.0" },
 ]
@@ -1316,6 +1334,19 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/bf/ce/46fbd9c8119cfc3581ee5643ea49464d168028cfb5caff5fc0596d0cf914/jsonschema_specifications-2025.4.1.tar.gz", hash = "sha256:630159c9f4dbea161a6a2205c3011cc4f18ff381b189fff48bb39b9bf26ae608", size = 15513 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/01/0e/b27cdbaccf30b890c40ed1da9fd4a3593a5cf94dae54fb34f8a4b74fcd3f/jsonschema_specifications-2025.4.1-py3-none-any.whl", hash = "sha256:4653bffbd6584f7de83a67e0d620ef16900b390ddc7939d56684d6c81e33f1af", size = 18437 },
+]
+
+[[package]]
+name = "jwcrypto"
+version = "1.5.6"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "cryptography" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/e1/db/870e5d5fb311b0bcf049630b5ba3abca2d339fd5e13ba175b4c13b456d08/jwcrypto-1.5.6.tar.gz", hash = "sha256:771a87762a0c081ae6166958a954f80848820b2ab066937dc8b8379d65b1b039", size = 87168 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/cd/58/4a1880ea64032185e9ae9f63940c9327c6952d5584ea544a8f66972f2fda/jwcrypto-1.5.6-py3-none-any.whl", hash = "sha256:150d2b0ebbdb8f40b77f543fb44ffd2baeff48788be71f67f03566692fd55789", size = 92520 },
 ]
 
 [[package]]
@@ -2917,6 +2948,19 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/33/ac/e5e0a807163652a35be878c0ad5cfd8b1d29605edcadfb5df3c512cdf9f3/sqlalchemy-2.0.40-cp313-cp313-win32.whl", hash = "sha256:a669cbe5be3c63f75bcbee0b266779706f1a54bcb1000f302685b87d1b8c1500", size = 2080704 },
     { url = "https://files.pythonhosted.org/packages/1c/cb/f38c61f7f2fd4d10494c1c135ff6a6ddb63508d0b47bccccd93670637309/sqlalchemy-2.0.40-cp313-cp313-win_amd64.whl", hash = "sha256:641ee2e0834812d657862f3a7de95e0048bdcb6c55496f39c6fa3d435f6ac6ad", size = 2104564 },
     { url = "https://files.pythonhosted.org/packages/d1/7c/5fc8e802e7506fe8b55a03a2e1dab156eae205c91bee46305755e086d2e2/sqlalchemy-2.0.40-py3-none-any.whl", hash = "sha256:32587e2e1e359276957e6fe5dad089758bc042a971a8a09ae8ecf7a8fe23d07a", size = 1903894 },
+]
+
+[[package]]
+name = "sse-starlette"
+version = "2.3.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "anyio" },
+    { name = "starlette" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/43/be/7e776a29b5f712b5bd13c571256a2470fcf345c562c7b2359f2ee15d9355/sse_starlette-2.3.4.tar.gz", hash = "sha256:0ffd6bed217cdbb74a84816437c609278003998b4991cd2e6872d0b35130e4d5", size = 17522 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/43/a4/ee4a20f0b5ff34c391f3685eff7cdba1178a487766e31b04efb51bbddd87/sse_starlette-2.3.4-py3-none-any.whl", hash = "sha256:b8100694f3f892b133d0f7483acb7aacfcf6ed60f863b31947664b6dc74e529f", size = 10232 },
 ]
 
 [[package]]
