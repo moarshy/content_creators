@@ -68,7 +68,7 @@ def main(host, port):
                 'This agent creates cohesive messaging adapted for different platforms '
                 'along with matching visuals to ensure brand consistency and engagement.'
             ),
-            url=f'http://{host}:{port}/',
+            url=os.getenv("PROXY_URL", "http://localhost:10000"),
             version='1.0.0',
             defaultInputModes=['text', 'text/plain'],
             defaultOutputModes=['text', 'text/plain', 'image/png', 'application/json'],
