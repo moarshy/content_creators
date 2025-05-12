@@ -27,7 +27,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 @click.command()
-@click.option('--host', 'host', default='localhost')
+@click.option('--host', 'host', default='0.0.0.0')
 @click.option('--port', 'port', default=10000)
 def main(host, port):
     """Entry point for the A2A Content Creation server."""
